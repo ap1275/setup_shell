@@ -79,9 +79,8 @@ sudo apt-get update && sudo apt-get --yes install yarn
 sudo apt-get --yes install redis-server
 
 #==============================================================================
-# install chromium and dependency libraries to run puppeteer
+# install dependency libraries of chromium to run puppeteer
 #==============================================================================
-sudo apt-get --yes install chromium
 sudo apt-get --yes install \
   gconf-service \
   libasound2\
