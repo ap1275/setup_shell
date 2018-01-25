@@ -22,16 +22,10 @@ if [ -z $NODE_INST_DIR ] ; then
 fi
 
 #==============================================================================
-# setup nodejs8.9.4
+# setup node.js
 #==============================================================================
-mkdir -p $NODE_INST_DIR
-cd $NODE_INST_DIR
-wget https://nodejs.org/dist/v8.9.4/node-v8.9.4-linux-x64.tar.xz
-tar Jxf node-v8.9.4-linux-x64.tar.xz
-rm node-v8.9.4-linux-x64.tar.xz
-ln -s node-v8.9.4-linux-x64 node
-echo "export PATH=$NODE_INST_DIR/node/bin:$PATH" >> ~/.profile
-source ~/.profile
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 #==============================================================================
 # setup c++ compiler and libraries for building native library of ruby gems
