@@ -16,11 +16,6 @@ if [ -z $GIT_USER ] && [ -z $GIT_MAIL ] ; then
   exit 1
 fi
 
-if [ -z $NODE_INST_DIR ] ; then
-  echo "set node install directory via environment variables"
-  exit 1
-fi
-
 #==============================================================================
 # setup node.js
 #==============================================================================
